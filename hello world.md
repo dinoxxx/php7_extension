@@ -45,12 +45,13 @@ zend_module_entry hello_module_entry = {
     STANDARD_MODULE_PROPERTIES
 };
 ```
-STANDARD_MODULE_HEADER帮我们实现了前面6个属性
-"hello"是扩展的名字
-hello_functions是扩展包含的全部方法的集合
-后面5个宏分别代表5个扩展特定方法
-PHP_HELLO_VERSION是扩展的版本号，定义在头文件中
-STANDARD_MODULE_PROPERTIES帮我们实现了剩下的属性
+* STANDARD_MODULE_HEADER帮我们实现了前面6个属性
+* "hello"是扩展的名字
+* hello_functions是扩展包含的全部方法的集合
+* 后面5个宏分别代表5个扩展特定方法
+* PHP_HELLO_VERSION是扩展的版本号，定义在头文件中
+* STANDARD_MODULE_PROPERTIES帮我们实现了剩下的属性
+
 暂时都不需要修改，知道这是一个入口就行。顺着这个入口，我们继续看怎么给扩展添加方法，在hello_functions[]方法数组中已经有了一个示例方法confirm_hello_compiled，我们参考它写我们的方法hello_world
 ```
 const zend_function_entry hello_functions[] = {
